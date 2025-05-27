@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kore Cukrászda - Hagyományos és modern ízek</title>
+    <title>Kóre Cukrászda - Hagyományos és modern ízek</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header>
         <div class="logo">
-            <h1>Kore Cukrászda</h1>
+            <h1>Kóre Cukrászda</h1>
             <p>Hagyományos receptek modern megközelítésben</p>
         </div>
         <nav>
@@ -17,9 +20,14 @@
                 <li><a href="#home">Főoldal</a></li>
                 <li><a href="#products">Termékek</a></li>
                 <li><a href="#about">Rólunk</a></li>
+                <li><a href="#gallery">Galéria</a></li>
                 <li><a href="#contact">Kapcsolat</a></li>
+                <li><a href="#order">Rendelés</a></li>
             </ul>
         </nav>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
     </header>
 
     <section id="home" class="hero">
@@ -65,9 +73,9 @@
         <div class="about-content">
             <img src="img/kore-uzlet.jpg" alt="Kore Cukrászda belülről">
             <div class="about-text">
-                <h3>Miért a Kore Cukrászda?</h3>
-                <p>A Kore Cukrászda 2018-ban nyitotta meg kapuit Budapest szívében. Célunk, hogy a hagyományos magyar és a modern koreai cukrászat legjobb elemeit ötvözzük.</p>
-                <p>Minden termékünk kézzel készül friss, kiváló minőségű alapanyagokból. Főszakácsunk, Kim Dzsongszu éveket töltött Szöulban a cukrászművészet tanulásával, mielőtt Magyarországra költözött volna.</p>
+                <h3>Miért a Kóre Cukrászda?</h3>
+                <p>A Kore Cukrászda 2003-ban nyitotta meg kapuit Tapiószele szívében. Célunk, hogy a hagyományos magyar és a modern koreai cukrászat legjobb elemeit ötvözzük.</p>
+                <p>Minden termékünk kézzel készül friss, kiváló minőségű alapanyagokból. Főszakácsunk, Kóre Pál éveket töltött Szöulban a cukrászművészet tanulásával, mielőtt Magyarországra költözött volna.</p>
                 <p>Különlegességünk a keleti és nyugati ízek harmóniája, amely egyedülálló élményt nyújt ízlelőbimbóinak.</p>
             </div>
         </div>
@@ -83,15 +91,81 @@
             <img src="img/galeria5.jpg" alt="Dobos torta szelet">
             <img src="img/galeria6.jpg" alt="Koreai tea">
         </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Kapcsolat</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Elérhetőségek</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 2766 Tápiószele, Bartók Béla u. 24/c.</p>
+                <p><i class="fas fa-phone"></i> +36 1 234 5679</p>
+                <p><i class="fas fa-envelope"></i> korecukraszda@freemail.hu</p>
+                <h3>Nyitvatartás</h3>
+                <p>Hetfő: Zárva</p>
+                <p>Kedd-Péntek: 8:00-20:00</p>
+                <p>Szombat-Vasárnap: 8:00-18:00</p>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2695.694060767015!2d19.051215315626722!3d47.49684097917745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741dc3d8ca7f7c1%3A0xb1b6b1b5e5b5b1b5!2sBudapest%2C%20Magyar%20u.%2012%2C%201053!5e0!3m2!1shu!2shu!4v1620000000000!5m2!1shu!2shu" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+            <div class="contact-form">
+                <form id="contactForm">
+                    <input type="text" placeholder="Név" required>
+                    <input type="email" placeholder="Email" required>
+                    <input type="tel" placeholder="Telefonszám">
+                    <textarea placeholder="Üzenet" required></textarea>
+                    <button type="submit" class="btn">Üzenet küldése</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="order" class="order">
+        <h2>Rendelés</h2>
+        <div class="order-container">
+            <div class="order-info">
+                <h3>Rendelési információk</h3>
+                <p>Tortarendeléshez kérjük, hogy minimum 72 órával korábban vegye fel velünk a kapcsolatot.</p>
+                <p>Kisebb rendeléseket (1-2 adag) az üzletünkben is felveszünk.</p>
+                <p>Szállítás Budapest területén: 1.500 Ft</p>
+                <p>Szállítási idő: 2-3 munkanap</p>
+            </div>
+            <div class="order-cta">
+                <a href="#contact" class="btn">Kapcsolatfelvétel</a>
+                <a href="https://rendeles.korecukraszda.hu" class="btn btn-secondary">Online rendelés</a>
+            </div>
+        </div>
+    </section>
 
     <footer>
         <div class="footer-content">
-            <div class="social-links">
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
+            <div class="footer-logo">
+                <h3>Kore Cukrászda</h3>
+                <p>Hagyomány és modernitás találkozása</p>
             </div>
-            <p>&copy; 2023 Kore Cukrászda</p>
+            <div class="footer-links">
+                <h4>Linkek</h4>
+                <ul>
+                    <li><a href="#home">Főoldal</a></li>
+                    <li><a href="#products">Termékek</a></li>
+                    <li><a href="#about">Rólunk</a></li>
+                    <li><a href="#contact">Kapcsolat</a></li>
+                </ul>
+            </div>
+            <div class="social-links">
+                <h4>Kövess minket</h4>
+                <div class="social-icons">
+                    <a href="https://facebook.com/korecukraszda"><i class="fab fa-facebook"></i></a>
+                    <a href="https://instagram.com/korecukraszda"><i class="fab fa-instagram"></i></a>
+                    <a href="https://tiktok.com/@korecukraszda"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Kóre Cukrászda. Minden jog fenntartva. | <a href="#">Adatvédelmi irányelvek</a></p>
         </div>
     </footer>
+
 </body>
 </html>
