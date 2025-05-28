@@ -30,12 +30,35 @@
         </div>
     </header>
 
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h2>Kivaló minőségű desszertek</h2>
-            <p>Fedezd fel egyedi ízvilágunkat!</p>
-            <a href="termekek.html" class="btn">Termékek</a>
+    <section id="home" class="hero-slideshow">
+        <div class="slides">
+            <div class="slide active" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('img/pult.jpg');">
+                <div class="hero-content">
+                    <h2>Kiváló minőségű desszertek</h2>
+                    <p>Fedezd fel egyedi ízvilágunkat!</p>
+                    <a href="termekek.html" class="btn">Termékek</a>
+                </div>
+            </div>
+            <div class="slide" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('img/sutik.jpg');">
+                <div class="hero-content">
+                    <h2>Hagyományos receptek</h2>
+                    <p>Generációk óta kedvelt ízeink</p>
+                    <a href="termekek.html" class="btn">Termékek</a>
+                </div>
+            </div>
+            <div class="slide" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('img/fagyi.jpg');">
+                <div class="hero-content">
+                    <h2>Friss alapanyagok</h2>
+                    <p>Minőségi nyári fagylaltjaink</p>
+                    <a href="termekek.html" class="btn">Termékek</a>
+                </div>
+            </div>
         </div>
+        <div class="slide-controls">
+            <button class="slide-prev"><i class="fas fa-chevron-left"></i></button>
+            <button class="slide-next"><i class="fas fa-chevron-right"></i></button>
+        </div>
+        <div class="slide-dots"></div>
     </section>
 
     <section id="about" class="about">

@@ -80,26 +80,8 @@ img {
     padding: 0 1.5rem;
 }
 
-@media (min-width: 768px) {
-    .container {
-        padding: 0 2rem;
-    }
-}
-
-@media (min-width: 1200px) {
-    .container {
-        padding: 0 3rem;
-    }
-}
-
 section {
     padding: 4rem 0;
-}
-
-@media (min-width: 768px) {
-    section {
-        padding: 5rem 0;
-    }
 }
 
 .section-title {
@@ -165,7 +147,7 @@ nav ul li a:hover {
 }
 
 .hero {
-    height: 100vh;
+    height: 80vh;
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('img/pult.jpg') center/cover no-repeat;
     color: var(--white);
     display: flex;
@@ -207,13 +189,6 @@ nav ul li a:hover {
     gap: 1.5rem;
     margin-top: 2rem;
     padding: 0 1rem;
-}
-
-@media (min-width: 768px) {
-    .product-grid {
-        gap: 2rem;
-        padding: 0;
-    }
 }
 
 .product-card {
@@ -293,13 +268,6 @@ nav ul li a:hover {
     padding: 0 1rem;
 }
 
-@media (min-width: 768px) {
-    .gallery-grid {
-        gap: 1.5rem;
-        padding: 0;
-    }
-}
-
 .gallery-grid img {
     height: 250px;
     object-fit: cover;
@@ -319,12 +287,6 @@ nav ul li a:hover {
     padding: 0 1rem;
 }
 
-@media (min-width: 768px) {
-    .contact-container {
-        gap: 3rem;
-        padding: 0;
-    }
-}
 .contact-info, .contact-form {
     padding: 40px;
 }
@@ -484,6 +446,130 @@ footer {
     color: var(--white);
 }
 
+.hero-slideshow {
+    position: relative;
+    height: 80vh;
+    overflow: hidden;
+    margin-top: 40px;
+    border-radius: 3%;
+}
+
+.slides {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    text-align: center;
+    color: var(--white);
+    z-index: 2;
+}
+
+.hero-content h2 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    animation: fadeInUp 1s ease;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    animation: fadeInUp 1.2s ease;
+}
+
+.slide-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.slide-prev, .slide-next {
+    background: rgba(255, 255, 255, 0.2);
+    color: var(--white);
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+    transition: var(--transition);
+    backdrop-filter: blur(5px);
+    margin: 0 1rem;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide-prev:hover, .slide-next:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.slide-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    z-index: 10;
+}
+
+.slide-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.slide-dot.active {
+    background: var(--white);
+    transform: scale(1.2);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 @media (max-width: 992px) {
     .about-content,
     .contact-container,
@@ -493,6 +579,13 @@ footer {
     
     .about-content img {
         order: -1;
+    }
+}
+
+@media (min-width: 768px) {
+    .product-grid {
+        gap: 2rem;
+        padding: 0;
     }
 }
 
@@ -545,6 +638,12 @@ footer {
     }
 }
 
+@media (min-width: 768px) {
+    section {
+        padding: 5rem 0;
+    }
+}
+
 @media (max-width: 576px) {
     .container {
         padding: 0 1.2rem;
@@ -571,5 +670,61 @@ footer {
     .btn {
         padding: 0.6rem 1.5rem;
         font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-content h2 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+    
+    .slide-prev, .slide-next {
+        padding: 0.8rem;
+        font-size: 1.2rem;
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (min-width: 768px) {
+    .gallery-grid {
+        gap: 1.5rem;
+        padding: 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-slideshow {
+        height: 50vh;
+    }
+    
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+    
+    .hero-content p {
+        font-size: 1rem;
+    }
+}
+@media (min-width: 768px) {
+    .container {
+        padding: 0 2rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        padding: 0 3rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .contact-container {
+        gap: 3rem;
+        padding: 0;
     }
 }
