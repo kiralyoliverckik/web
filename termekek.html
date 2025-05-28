@@ -4,9 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pékségünk - Teljes termékkínálat</title>
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="termekek.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <header>
         <div class="logo">
@@ -889,33 +892,59 @@
                 </table>
             </div>
 
-        <footer>
-        <div class="footer-content">
+<footer>
+    <div class="footer-content">
+        <div class="footer-brand">
+            <h3>Kóre Cukrászda</h3>
+            <p class="tagline">Hagyomány és modernitás találkozása</p>
             <div class="footer-logo">
-                <h3>Kóre Cukrászda</h3>
-                <p>Hagyomány és modernitás találkozása</p>
+                <!-- Add your logo here if you have one -->
+                <img src="img/logo.png" alt="Kóre Cukrászda logo" width="120">
             </div>
-            <div class="footer-links">
-                <h4>Linkek</h4>
+        </div>
+
+        <div class="footer-links">
+            <div class="links-column">
+                <h4>Navigáció</h4>
                 <ul>
-                    <li><a href="index.html">Főoldal</a></li>
+                    <li><a href="#home">Főoldal</a></li>
                     <li><a href="termekek.html">Termékek</a></li>
-                    <li><a href="index.html">Rólunk</a></li>
-                    <li><a href="index.html">Kapcsolat</a></li>
+                    <li><a href="#about">Rólunk</a></li>
+                    <li><a href="#gallery">Galéria</a></li>
                 </ul>
             </div>
-            <div class="social-links">
-                <h4>Kövess minket</h4>
-                <div class="social-icons">
-                    <a href="https://facebook.com/kore.cukraszda"><i class="fab fa-facebook"></i></a>
-                    <a href="https://instagram.com/korecukraszda"><i class="fab fa-instagram"></i></a>
-                    <a href="https://tiktok.com/@korecukraszda"><i class="fab fa-tiktok"></i></a>
-                </div>
+            <div class="links-column">
+                <h4>Információk</h4>
+                <ul>
+                    <li><a href="#contact">Kapcsolat</a></li>
+                    <li><a href="#order">Rendelés</a></li>
+                    <li><a href="#">ÁSZF</a></li>
+                    <li><a href="#">Adatvédelem</a></li>
+                </ul>
             </div>
         </div>
-        <div class="copyright">
-            <p>&copy; 2025 Kóre Cukrászda. Minden jog fenntartva. | <a href="#">Adatvédelmi irányelvek</a></p>
+
+        <div class="footer-contact">
+            <h4>Elérhetőség</h4>
+            <address>
+                <p><i class="fas fa-map-marker-alt"></i> 2766 Tápiószele, Bartók Béla u. 24/c.</p>
+                <p><i class="fas fa-phone"></i> +36 53 380 357</p>
+                <p><i class="fas fa-envelope"></i> korecuki@freemail.hu</p>
+            </address>
         </div>
-    </footer>
+    </div>
+
+    <div class="footer-bottom">
+        <div class="social-links">
+            <a href="https://facebook.com/kore.cukraszda" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://instagram.com/korecukraszda" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://tiktok.com/@korecukraszda" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="#" aria-label="Google Maps"><i class="fas fa-map-marked-alt"></i></a>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Kóre Cukrászda. Minden jog fenntartva.</p>
+        </div>
+    </div>
+</footer>
 </body>
 </html>

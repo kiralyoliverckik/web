@@ -337,6 +337,9 @@ nav ul li a:hover {
 }
 
 .order-container {
+    margin-left: 3rem;
+    margin-right: 3rem;
+    margin-top: 3rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 3rem;
@@ -345,7 +348,7 @@ nav ul li a:hover {
 
 .order-info h3 {
     font-size: 1.5rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     color: var(--primary-color);
 }
 
@@ -557,6 +560,302 @@ footer {
 .slide-dot.active {
     background: var(--white);
     transform: scale(1.2);
+}
+
+/* Footer Styles */
+footer {
+    background: linear-gradient(135deg, var(--primary-color), #4a2c12);
+    color: var(--white);
+    padding: 3rem 0 0;
+    font-size: 0.95rem;
+    position: relative;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.footer-brand {
+    margin-bottom: 1.5rem;
+}
+
+.footer-brand h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: var(--accent-color);
+}
+
+.tagline {
+    font-style: italic;
+    margin-bottom: 1.5rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-logo img {
+    max-width: 150px;
+    height: auto;
+    filter: brightness(0) invert(1);
+    opacity: 0.9;
+}
+
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+}
+
+.links-column h4 {
+    font-size: 1.2rem;
+    margin-bottom: 1.2rem;
+    color: var(--accent-color);
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.links-column h4::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 2px;
+    background: var(--accent-color);
+}
+
+.links-column ul li {
+    margin-bottom: 0.7rem;
+}
+
+.links-column ul li a {
+    color: rgba(255, 255, 255, 0.7);
+    transition: var(--transition);
+    display: block;
+    padding: 0.3rem 0;
+}
+
+.links-column ul li a:hover {
+    color: var(--white);
+    transform: translateX(5px);
+}
+
+.footer-contact h4 {
+    font-size: 1.2rem;
+    margin-bottom: 1.2rem;
+    color: var(--accent-color);
+}
+
+.footer-contact address p {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: flex-start;
+    line-height: 1.6;
+}
+
+.footer-contact i {
+    margin-right: 1rem;
+    color: var(--accent-color);
+    width: 20px;
+    text-align: center;
+    margin-top: 3px;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1.5rem 2rem;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1.2rem;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    color: var(--white);
+    transition: var(--transition);
+    font-size: 1.1rem;
+}
+
+.social-links a:hover {
+    background: var(--accent-color);
+    transform: translateY(-3px);
+    color: var(--dark-color);
+}
+
+.copyright {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+}
+
+.copyright a {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+/* Enhanced Contact Section */
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+}
+
+@media (min-width: 992px) {
+    .contact-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.contact-info {
+    display: grid;
+    gap: 2rem;
+}
+
+.social-section {
+    margin: 1.5rem 0;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.social-section h3 {
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.social-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.8rem;
+    border-radius: 8px;
+    color: white;
+    font-weight: 500;
+    transition: var(--transition);
+    font-size: 0.9rem;
+}
+
+.social-btn i {
+    margin-right: 8px;
+    font-size: 1.1rem;
+}
+
+.social-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.fb { background: #3b5998; }
+.fb:hover { background: #4c70ba; }
+
+.ig { 
+    background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
+}
+.ig:hover { opacity: 0.9; }
+
+.tt { background: #000000; }
+.tt:hover { background: #333333; }
+
+.messenger { background: #006AFF; }
+.messenger:hover { background: #0088ff; }
+
+.business-hours {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1.5rem;
+    border-radius: 10px;
+}
+
+.business-hours h3 {
+    color: var(--accent-color);
+    margin-bottom: 2rem;
+    font-size: 1.3rem;
+}
+
+.business-hours p {
+    display: flex;
+    margin-bottom: 0.7rem;
+    padding-bottom: 0.7rem;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+}
+
+.business-hours p span {
+    font-weight: 500;
+    margin-left: 0.4rem;
+    color: var(--accent-color);
+}
+
+.map-container {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    height: 300px;
+}
+
+.contact-form {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.contact-form textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.contact-form button {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .footer-bottom {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .footer-content {
+        padding: 0 3rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .footer-content {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }
 
 @keyframes fadeInUp {
