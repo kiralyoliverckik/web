@@ -190,6 +190,19 @@ nav ul li a:hover {
     opacity: 1;
 }
 
+/* Slide backgrounds */
+.slide-1 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('img/pult.jpg');
+}
+
+.slide-2 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('img/sutik.jpg');
+}
+
+.slide-3 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('img/fagyi.jpg');
+}
+
 .hero-content {
     max-width: 800px;
     margin: 0 auto;
