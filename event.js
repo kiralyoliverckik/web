@@ -25,13 +25,17 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function goToSlide(index) {
-        slides[currentSlide].classList.remove('active');
-        dots[currentSlide].classList.remove('active');
-        currentSlide = index;
-        slides[currentSlide].classList.add('active');
-        dots[currentSlide].classList.add('active');
-
-        resetInterval();
+      slides.forEach(slide => {
+        slide.classList.remove('active');
+        slide.classList.forEach(className => {
+          if (className.startsWith('slide-')) {
+            slide.classList.remove(className);
+          }
+        });
+      });
+      
+      slides[index].classList.add('active', `slide-${index + 1}`);
+      currentSlide = index;
     }
 
     function resetInterval() {
